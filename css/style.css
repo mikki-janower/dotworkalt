@@ -270,57 +270,6 @@ font-size:17px;
       display:inline-block;
       padding-right:6px;
   }
-
-    .pic{
-      max-width: 90%;
-    }
-    .reflections{
-      justify-self:center;
-      grid-column:4;
-      grid-row:1;
-      align-self:flex-start;
-      margin-top:-10px;
-    }
-    .spiritmolecule{
-      grid-column:5;
-      grid-row: 3/span 2;
-      margin-top:20px;
-      justify-self:center;
-    }
-    .reconna{
-      grid-column:3;
-      grid-row:1/span 2;
-      justify-self:flex-start;
-      align-self:flex-end;
-    }
-    .majorarcana{
-      justify-self:flex-start;
-      margin-top:0px;
-
-    }
-    .discoveryourair{
-      margin-top:-160px;
-      grid-column:3;
-      grid-row:4;
-      align-self:flex-end;
-    }
-    .soundscapes{
-      margin-top:0px;
-      justify-self:center;
-      grid-column:5;
-      grid-row:2;
-    }
-    .reconna{
-      grid-row:1;
-      align-self:flex-start;
-      margin-top:-10px;
-
-    }
-    .postcursor{
-      grid-column:2;
-      grid-row:3;
-      margin-top:-125px;
-    }
 }
 @media (max-width:1000px){
   .words, #about .p, #about .contact{
@@ -328,10 +277,10 @@ font-size:17px;
   }
 }
 @media (max-width: 900px){
-  .listing{
-      padding-right:4px;
-  }
   .extender{
+    padding-top:8px;
+    grid-row-gap:14px;
+    grid-template-columns: 35% 35% 22% 8%;
     padding-right:6px;
     grid-template-rows: auto auto;
   }
@@ -339,22 +288,18 @@ font-size:17px;
       display:none;
   }
   .images{
-      padding-right:0;
+      padding-right:4px;
       grid-column: 1/span 4;
       grid-row:1;
   }
   .images img{
-      display:flex;
+      display:inline-block;
       max-width:100%;
+      height:auto;
   }
   .title, .description{
       vertical-align:top;
       padding-right:30px;
-  }
-  .extender{
-      padding-top:8px;
-      grid-row-gap:14px;
-      grid-template-columns: 35% 35% 22% 8%;
   }
   .more{
       margin-bottom: 40px;
@@ -382,21 +327,6 @@ font-size:17px;
   }
   .details span{
       margin-right:0px;
-  }
-  .buttons{
-      justify-content:flex-start;
-      text-align:left;
-      flex-direction:column;
-      grid-column:3/span 4;
-      grid-row:2;
-      justify-content:flex-end;
-      padding-right:24px;
-  }
-  .buttons a{
-      align-self:flex-start;
-  }
-  .reconna{
-    margin-top: 70px;
   }
 }
 @media (max-width: 800px) { 
