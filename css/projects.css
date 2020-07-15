@@ -107,8 +107,9 @@ grid-row:3;
 /*-----------------------various polyptych setups for multiple images in one row----------------*/
 /*---!!!!!-------!!!!-----On mobile, make sure these classes are removed-  !!!!!!     !!!!!------*/
 .diptych{
-    display:inline-flex;
-    flex-direction:row;
+    display:inline-grid;
+    grid-template-columns:auto auto;
+    grid-column-gap: 6px;
     max-width:100%;
     justify-content:space-between;
     overflow-x:hidden;
@@ -116,7 +117,7 @@ grid-row:3;
 .diptych img{
     position:relative;
     padding-right:6px;
-    width:50%;
+    grid-column-gap:6px;
     align-self:flex-start;
 }
 .triptych{

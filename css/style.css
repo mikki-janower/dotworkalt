@@ -1,26 +1,10 @@
 @font-face{
-  font-family: "SansMedium";
-  src: url("fonts/SansMedium.otf") format('opentype');
+  font-family: "Neue Montreal Medium";
+  src:url('fonts/NeueMontreal-Medium') format('otf');
 }
 @font-face{
-  font-family: 'SansRegular';
-  src: url('fonts/SansRegular.otf') format('opentype');
-}
-@font-face{
-  font-family: 'Serif Light Italic';
-  src: url('fonts/SerifLightItalic.otf') format('opentype');
-}
-@font-face{
-  font-family: 'SerifLight';
-  src: url('fonts/SerifLight.otf') format('opentype');
-}
-@font-face{
-  font-family: 'SansMediumItalic';
-  src: url('fonts/SansMediumItalic.otf') format('opentype');
-}
-@font-face{
-  font-family: 'NeueMachina';
-  src: url('fonts/NeueMachina-Regular.otf')
+  font-family: "Saol Display Light Italic";
+  src:url('fonts/SaolDisplay-LightItalic') format('otf');
 }
 
 html{
@@ -32,7 +16,7 @@ html{
 }
 body {
   max-height: 100vh;
-	font-family: 'SansMedium';
+	/*font-family: 'Neue Montreal Medium';*/
 	font-size: 16px;
 	line-height: 1;
 	background-color: rgba();
@@ -43,8 +27,8 @@ body {
 }
 .dot{
   font-size: 16px;
-  font-family: 'Serif Light Italic';
-  font-family: 'Times New Roman';
+  font-family: 'Saol Display Light Italic';
+  /*font-family: 'Times New Roman';*/
   font-style:italic;
   text-transform:lowercase;
 }
@@ -54,14 +38,14 @@ body {
   position: fixed; 
   display:grid;
   width: 100%;
-  grid-template-columns: 35fr 35fr 30fr 8px;
+  grid-template-columns: 35fr 35fr 30fr 10px;
   flex-direction: row;
   padding-left:8px;
   padding-top:12px;
   background-color:#f2f2f2;
-  -webkit-box-shadow: 0px -1px 10px 9px #f2f2f2;
-  -moz-box-shadow: 0px -1px 10px 9px #f2f2f2;
- box-shadow: 0px -1px 10px 9px #f2f2f2;
+  -webkit-box-shadow: 0px -1px 10px 10px #f2f2f2;
+  -moz-box-shadow: 0px -1px 10px 10px #f2f2f2;
+ box-shadow: 0px -1px 10px 10px #f2f2f2;
 
 transition-property: background-color, box-shadow;
 transition-duration: 0.5s, .5s;
@@ -71,7 +55,7 @@ transition: background-color 0.5s linear;
 }
 .top p, .top a, .bottom a, #projfooter{
   color: black;
-  font-family: 'SansMedium';
+  font-family: 'Times New Roman';
   letter-spacing:-.2px;
   font-size: 1.8rem;
   text-align: left;
@@ -116,7 +100,7 @@ a{
 #about{
 font-size:17px;
  position: relative;
- font-family: 'SansRegular';
+/* font-family: 'Neue Montreal';*/
  line-height:1.3;
  max-width: 100%;
  display: inline-grid;
@@ -201,6 +185,7 @@ font-size:17px;
 }
 .thumbnails{
   grid-column:3;
+  padding-right:4px;
   display:flex;
   justify-content:flex-end;
   align-content:stretch;
@@ -208,7 +193,7 @@ font-size:17px;
 }
 .thumbnails img{
   height:26px;
-  padding-right:10px;
+  padding-right:6px;
   display:inline-block;
   vertical-align:center;
 }
@@ -272,7 +257,7 @@ font-size:17px;
   border-radius:8px;
 }
 .words a, .words i{
-  font-family: "SaolItalic";
+  font-family: "Saol Display Light Italic";
 }
 /*---------------------------------meeeeeeeeeedia queeeeeeeeriiiiiiiiiiiiesssssss-----------*/
 

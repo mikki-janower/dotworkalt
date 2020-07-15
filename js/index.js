@@ -33,7 +33,9 @@ $(listing).click(function(){
 $(extender).click(function(){
     let dataLink = $(this).data("link");
     if (dataLink == "0"){
-    } else{
+    } else if ($(this).data("target") == "_blank") {
+        window.open(dataLink);
+    } else {
         window.location.href = dataLink;
     }
 }); 
