@@ -63,8 +63,8 @@ $('.listing a, .more a').mouseout(function() {
 $(".about").click(function () {
     if (about == false) {
         //---------------show about
-         $("#about").slideToggle(200).find('img').css("height", $("#about p").height());
-         $("#about img").slideDown(200);
+         $("#about").slideToggle(250).find('img').css("height", $("#about p").height());
+         $("#about img").slideDown(250);
          $('html,body').animate({
             scrollTop: $("#about").offset().top - 80
          });
@@ -72,7 +72,7 @@ $(".about").click(function () {
         about = true;
 
     } else {
-        $("#about").slideUp(200);
+        $("#about").slideUp(250);
         about = false;
     }
 });
