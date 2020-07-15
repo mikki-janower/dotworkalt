@@ -216,14 +216,12 @@ font-size:17px;
   grid-row:2;
 }
 .images img{
-  height: auto;
   max-width:50%;
+  height:auto;
   padding-right:10px;
 }
 .images{
-  max-width:100%;
   padding-right:10px;
-  height:auto;
   grid-column:2;
   grid-row: 1/span 3;
   display:inline-flex;
@@ -335,12 +333,15 @@ font-size:17px;
   }
   .extender{
     padding-right:6px;
+    grid-template-rows: auto auto;
   }
   .extender img:nth-of-type(2){
       display:none;
   }
   .images{
       padding-right:0;
+      grid-column: 1/span 4;
+      grid-row:1;
   }
   .images img{
       display:flex;
@@ -354,10 +355,6 @@ font-size:17px;
       padding-top:8px;
       grid-row-gap:14px;
       grid-template-columns: 35% 35% 22% 8%;
-  }
-  .images{
-      grid-column:1/span 4;
-      grid-row:1;
   }
   .more{
       margin-bottom: 40px;
