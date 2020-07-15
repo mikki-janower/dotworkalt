@@ -102,6 +102,7 @@ a{
   height:auto;
   width:100%;
   min-height:10px;
+  /*border-bottom:1px black solid;*/
 }
 #about{
 font-size:17px;
@@ -221,9 +222,9 @@ font-size:17px;
   grid-row:2;
 }
 .images img{
-  display: block;
+  display: inline-block;
   width:50%;
-  height:auto;
+  height:100%;
   padding-right:10px;
   object-fit:cover;
 }
@@ -342,6 +343,7 @@ font-size:17px;
 #about .contact{
     grid-row:2;
     padding-left:6px;
+    padding-bottom:14px;
 }
 }
 
