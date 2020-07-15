@@ -216,16 +216,19 @@ font-size:17px;
   grid-row:2;
 }
 .images img{
+  display: block;
   max-width:50%;
+  width:auto;
   height:auto;
   padding-right:10px;
 }
 .images{
-  padding-right:10px;
   grid-column:2;
   grid-row: 1/span 3;
-  display:inline-flex;
+  display:flex;
   flex-direction:row;
+  padding-right:10px;
+  align-content:flex-start;
 }
 .words{
   font-family: 'SansRegular';
@@ -293,9 +296,7 @@ font-size:17px;
       grid-row:1;
   }
   .images img{
-      display:inline-block;
       max-width:100%;
-      height:auto;
   }
   .title, .description{
       vertical-align:top;
