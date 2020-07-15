@@ -19,18 +19,6 @@ $(document).ready(function () {
         
         return false;
     });
-
-    /* $('.projectTitle').click(function(){
-    window.location.href = 'index.html';
-      return false;
-});
-//-------------------------------------------------------------say "back" on hover
-$('.projectTitle').mouseover(function(){
-        $('.projectTitle').html("Back");
-});
-$('.projectTitle').mouseout(function(){
-    $('.projectTitle').html(title);
-}); */
     //-------------------------------------------------------------enlarge image on click
 
     $("#project img").each(function (index) {
@@ -85,9 +73,9 @@ $('.projectTitle').mouseout(function(){
                 $(".top").css({
                     transition: "0s",
                     "background-color": "#f2f2f2",
-                    "-webkit-box-shadow": "0px -1px 11px 12px #f2f2f2",
-                    "-moz-box-shadow": "0px -1px 11px 12px #f2f2f2",
-                    "box-shadow": "0px -1px 11px 12px #f2f2f2"
+                    "-webkit-box-shadow": "0px -1px 6px 8px #f2f2f2",
+                    "-moz-box-shadow": "0px -1px 6px 8px #f2f2f2",
+                    "box-shadow": "0px -1px 6px 8px #f2f2f2"
                 });
                 next();
             });
