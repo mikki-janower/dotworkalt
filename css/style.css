@@ -189,9 +189,9 @@ font-family: 'Neue Montreal';
   cursor:pointer;
 }
 
-/*.listing:hover{
+.listing:hover{
   padding-bottom:16px;
-}*/
+}
 /*------------make featured story one huge image rather than 2 thumbnails--------*/
 .firstfeature{
   height:auto;
