@@ -7,7 +7,6 @@ $(document).ready(function(){
  });*/
  let index = true;
  let about = false;
- let extended= false;
 
  //function to get every listing to open up sequentially, .3s apart
 /* $('.extender').each(function (i) {
@@ -36,8 +35,6 @@ const observer = lozad(); // lazy loads elements with default selector as '.loza
 observer.observe();
 
 //----------------------------make extender visible on click
-var minilisting = $('.mini');
-var fulllisting = $('.full');
 var extender = $('.extender');
 var listing = $('.listing')
 
@@ -87,16 +84,14 @@ $('.listing a, .more a').mouseout(function() {
         });
     });
 //--------------------------------------------------------------------------------index page turns
-//----------------------------------------index appear
+//----------------------------------------about
 
-$(".about").click(function () {
+/*$(".about").click(function () {
+
     if (about == false) {
         //---------------show about
-         $("#about").slideToggle(250).find('img').css("height", $("#about p").height());
-         $("#about img").slideDown(250);
-         $('html,body').animate({
-            scrollTop: $("#about").offset().top - 80
-         });
+        $("#about").slideToggle(250).find('img').css("height", $("#about p").height());
+        $("#about img").slideDown(250);
 
         about = true;
 
@@ -104,6 +99,10 @@ $(".about").click(function () {
         $("#about").slideUp(250);
         about = false;
     }
+
+    $('html,body').animate({
+        scrollTop: $("#about").offset().top - 80
+     });
 });
 
 $(window).resize(function(){
@@ -112,6 +111,24 @@ $(window).resize(function(){
         let imgheight = $('#about p').height();
         $("#about img").css("height", imgheight);
     }
+}); */
+
+$(".about").click(function () {
+
+    if (about == false) {
+        //---------------show about
+        $("#about").slideToggle(250);
+        $("#about img").css("display", "block");
+        about = true;
+
+    } else {
+        $("#about").slideUp(250);
+        about = false;
+    }
+
+    $('html,body').animate({
+        scrollTop: $("#about").offset().top - 80
+     });
 });
 
 //---------------------------------.name homepage turn
