@@ -1,6 +1,6 @@
 $(document).ready(function(){
  $('#fullindex').fadeIn(200);
- $('.firstfeature').find(".extender").delay(500).slideToggle(350);
+ $('.firstfeature').find(".extender").delay(400).slideToggle(350);
  //$('.secondfeature').find(".extender").delay(700).slideToggle(250);
  /*$('.listing').each(function(){
     $('.extender').slideDown(350)
@@ -9,19 +9,24 @@ $(document).ready(function(){
  let about = false;
  let extended= false;
 
+ //function to get every listing to open up sequentially, .3s apart
 /* $('.extender').each(function (i) {
-
          // store the item around for use in the 'timeout' function
       var $item = $(this); 
       // execute this function sometime later:
       setTimeout(function() { 
         $item.slideToggle(300)}, 300*i);
-
-
-
       // each element should animate half a second after the last one.
   }).delay(600); */
  
+  $(".listing").css('position', 'relative').click(function () {
+    if($(this).offset().top == -250) {
+         $(this).animate({'top': '0px'}, 1000);
+    }
+    else {
+         $(this).animate({'top': '-250px'}, 1000);
+    }
+});
     
 //lozad is supposed to help with lazyloading, etc
 var image = $('img');

@@ -179,7 +179,6 @@ font-family: 'Neue Montreal';
   justify-content:center;
   padding-right:0px;
   max-width:100%;
-  height:auto;
   border-bottom:1px solid black;
   display:grid;
   grid-template-columns: 35% 35% 30%;
@@ -190,10 +189,16 @@ font-family: 'Neue Montreal';
   cursor:pointer;
 }
 
-.listing:hover{
-  padding-bottom:20px;
-}
+/*.listing:hover{
+  padding-bottom:16px;
+}*/
 /*------------make featured story one huge image rather than 2 thumbnails--------*/
+.firstfeature{
+  height:auto;
+}
+.firstfeature:hover{
+  padding-bottom:10px;
+}
 .firstfeature .extender img:nth-of-type(2){
   display:none;
 }
@@ -202,6 +207,8 @@ font-family: 'Neue Montreal';
 }
 .firstfeature .extender{
   padding-right:0;
+  height:auto;
+  display:grid;
 }
 /*----back 2 our regularly scheduled programming----*/
 .buttons{
@@ -238,17 +245,20 @@ font-family: 'Neue Montreal';
   padding-left:10px;
   line-height:1.2;
   margin-bottom:10px;
+  background-color:#f2f2f2;
 }
 .extender{
   position:relative;
   max-width:100%;
-  display:grid;
+ /* display:grid;*/
+  display:none;
   grid-column:1/span 3;
   grid-template-columns: 35% 65%;
   grid-template-rows: auto auto auto;
   padding-top:10px;
   padding-right:10px;
   grid-row:2;
+  z-index:0;
 }
 .images img{
   display: inline-block;
