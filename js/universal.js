@@ -21,6 +21,23 @@ $(document).ready(function () {
     $(window).resize(function() {
         dot();
     });
+
+    //-------------------------fade in on scroll
+//AOS
+/*AOS.init();
+
+let image = $('#gallery img');
+$(image).attr({
+    "data-aos": "fade-in",
+    "data-aos-anchor-placement": "top-bottom",
+    "data-aos-delay" : "0",
+    "data-aos-easing" : "linear",
+    "data-aos-duration": "500",
+});
+
+/*let listing = $('.listing');
+$(listing).attr("data-aos", "fade-in"); */
+
  //--------------------temporary div that shows width—use to fix media queries as precisely as possible
     $(window).resize(function () {
         let width = window.innerWidth;

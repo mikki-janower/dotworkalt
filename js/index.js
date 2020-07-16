@@ -2,8 +2,20 @@ $(document).ready(function(){
  $('#fullindex').fadeIn(200);
  $('.firstfeature').find(".extender").delay(350).slideToggle(250);
  //$('.secondfeature').find(".extender").delay(700).slideToggle(250);
+ /*$('.listing').each(function(){
+    $('.extender').slideDown(350)
+ });*/
  let index = true;
  let about = false;
+
+/*$(".extender").each(function (i) {
+      // store the item around for use in the 'timeout' function
+      var $item = $(this); 
+      // execute this function sometime later:
+      setTimeout(function() { 
+        $item.slideToggle(250)}, 250*i);
+      // each element should animate half a second after the last one.
+  });*/
  
     
 //lozad is supposed to help with lazyloading, etc

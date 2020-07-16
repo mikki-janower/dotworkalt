@@ -1,10 +1,11 @@
 $(document).ready(function () {
-    $("#project").fadeIn("100");
+   $("#project").fadeIn("100");
     $(document).delay(200).queue(function (next) {
         $(".projectTitle").css("transform", "rotate(0deg)");
         $(".index").css("transform", "rotate(0deg)");
         next();
     });
+
     //------------------------------------redirect to homepage when .name or .projectTitle are clicked
     $(".name, .index").click(function () {
        $(".projectTitle").css("transform", "rotateY(90deg)");
@@ -73,9 +74,9 @@ $(document).ready(function () {
                 $(".top").css({
                     transition: "0s",
                     "background-color": "#f2f2f2",
-                    "-webkit-box-shadow": "0px -1px 6px 8px #f2f2f2",
-                    "-moz-box-shadow": "0px -1px 6px 8px #f2f2f2",
-                    "box-shadow": "0px -1px 6px 8px #f2f2f2"
+                    "-webkit-box-shadow": "0px -1px 10px 11px #f2f2f2",
+                    "-moz-box-shadow": "0px -1px 10px 11px #f2f2f2",
+                    "box-shadow": "0px -1px 10px 11px #f2f2f2"
                 });
                 next();
             });
