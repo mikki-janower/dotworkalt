@@ -1,6 +1,6 @@
 $(document).ready(function(){
  $('#fullindex').fadeIn(200);
- $('.firstfeature').find(".extender").delay(600).slideToggle(350);
+ $('.firstfeature').find(".extender").delay(500).slideToggle(350);
  //$('.secondfeature').find(".extender").delay(700).slideToggle(250);
  /*$('.listing').each(function(){
     $('.extender').slideDown(350)

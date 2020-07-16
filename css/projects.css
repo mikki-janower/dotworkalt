@@ -2,14 +2,11 @@
     justify-self:flex-start;
     cursor: default;
     transition:.2s;
+    transform:rotateY(90deg);
 }
 .projectTitle:hover{
 cursor:default;
 }
-.index{
-    justify-self:flex-end; 
-   transform:rotateY(90deg);
-  }
 
 #project{
     position:relative;

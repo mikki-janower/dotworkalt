@@ -41,7 +41,6 @@ body {
   font-size: 16px;
   font-family: 'Saol Display';
   font-style:italic;
-  text-transform:lowercase;
 }
 .top{
   top:0;
@@ -110,7 +109,6 @@ a{
 }
 .index{
   justify-self:flex-end; 
- transform:rotateY(90deg);
 }
 
 /*-------------------------------------about----------------------------------------*/
@@ -141,7 +139,7 @@ font-family: 'Neue Montreal';
   grid-row:1;
   grid-column:2;
   padding-right:30px;
-  padding-bottom:14px;
+  padding-bottom:16px;
 }
 #about img{
   transition:.2s;
@@ -186,9 +184,14 @@ font-family: 'Neue Montreal';
   display:grid;
   grid-template-columns: 35% 35% 30%;
   grid-template-rows: auto auto;
+  background-color:#f2f2f2;
 
   transition: .2s;
   cursor:pointer;
+}
+
+.listing:hover{
+  padding-bottom:20px;
 }
 /*------------make featured story one huge image rather than 2 thumbnails--------*/
 .firstfeature .extender img:nth-of-type(2){
