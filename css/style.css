@@ -1,18 +1,18 @@
 @font-face{
   font-family: "Neue Montreal Medium";
-  src:url('fonts/NeueMontreal-Medium');
+  src:url('fonts/NeueMontreal-Medium.otf');
 }
 @font-face{
   font-family: "Neue Montreal";
-  src:url('fonts/NeueMontreal-Regular');
+  src:url('fonts/NeueMontreal-Regular.otf');
 }
 @font-face{
   font-family: "Saol Display";
-  src:url('fonts/SaolDisplay-LightItalic');
+  src:url('fonts/SaolDisplay-LightItalic.otf');
 }
 @font-face{
   font-family: "Reconna";
-  src:url('fonts/ReconnaSerif');
+  src:url('fonts/ReconnaSerif.otf');
 }
 @font-face{
   font-family: "Neue Machina";
