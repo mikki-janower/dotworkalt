@@ -1,22 +1,22 @@
 @font-face{
   font-family: "Neue Montreal Medium";
-  src:url('fonts/NeueMontreal-Medium') format('otf');
+  src:url('fonts/NeueMontreal-Medium');
 }
 @font-face{
   font-family: "Neue Montreal";
-  src:url('fonts/NeueMontreal-Regular') format('otf');
+  src:url('fonts/NeueMontreal-Regular');
 }
 @font-face{
   font-family: "Saol Display";
-  src:url('fonts/SaolDisplay-LightItalic') format('otf');
+  src:url('fonts/SaolDisplay-LightItalic');
 }
 @font-face{
   font-family: "Reconna";
-  src:url('fonts/ReconnaSerif') format('otf');
+  src:url('fonts/ReconnaSerif');
 }
 @font-face{
   font-family: "Neue Machina";
-  src:url('fonts/NeueMachina-Regular.woff') format('woff');
+  src:url('fonts/NeueMachina-Regular.woff');
 }
 
 html{
@@ -60,7 +60,7 @@ transition-duration: 0.5s, .5s;
 -ms-transition: background-color 0.5s linear;
 transition: background-color 0.5s linear;
 }
-.top p, .top a, .bottom a, #projfooter, .mobilecontact a{
+.top p, .top a, .bottom a, #projfooter, .mobilecontact{
   color: black;
   font-family: 'Neue Montreal Medium';
   letter-spacing:-.2px;
@@ -161,14 +161,14 @@ font-family: 'Neue Montreal';
 #about .mobilecontact{
   display:none;
   padding-left:4px;
-  grid-row:2;
+  grid-row:3;
   grid-column:1;
-  align-content:flex-start;
   line-height:1;
   flex-direction:column;
   flex-wrap:wrap;
   padding-bottom:14px;
-  transition:.3s; 
+  transition:.2s; 
+  justify-content:flex-start;
 }
 .contact a:hover, .p a:hover, .listing a:hover, .more a:hover, #description a:hover{
   border-radius:10px;
@@ -403,24 +403,25 @@ font-family: 'Neue Montreal';
   #about img{
     display:block;
     max-width:100%;
+    max-height:100%;
     padding:0;
     padding-left:5px;
-    padding-bottom:14px;
-    grid-row:1;
-    grid-column:1;
+    padding-bottom:10px;
+    grid-row:2;
+    grid-column:1/span 2;
+    padding-right:10px;
   }
   #about .p{
-    grid-column:2;
+    grid-column:1/span 2;
     padding-right:6px;
-    grid-row:1/span 2;
-    padding-right:px;
-    padding-bottom:20px;
+    grid-row:1;
+    padding-right:20px;
   }
   #about .contact{
     display:none;
   }
   #about .mobilecontact{
-    display:flex;
+    display:grid;
   }
 
 }
