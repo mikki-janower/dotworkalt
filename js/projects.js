@@ -2,7 +2,7 @@ $(document).ready(function () {
    $("#project").fadeIn("100");
     $(document).delay(200).queue(function (next) {
         $(".projectTitle").css("transform", "rotate(0deg)");
-        $(".index").css("transform", "rotate(0deg)");
+        //$(".index").css("transform", "rotate(0deg)");
         next();
     });
 

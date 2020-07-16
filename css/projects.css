@@ -294,29 +294,20 @@ input:focus::-webkit-slider-runnable-track {
 @media (max-width: 1500px) {
  }
 
-@media (max-width: 1100px) {
-    /*#project{
-        grid-template-columns:32vw 3vw 63vw 2vw; 
-    }*/
 @media (max-width: 1000px) {
-        #description, #description a, .detail{
+        #label, #description, #description a, .detail{
             font-size:14px;
-        }
-        #project #label{
-            font-size:17px;
         }
         #projfooter{
             font-size: 1em;
         }
-    }
+ }
 @media (max-width: 950px) {
-        #description, #description a, .detail{
-            font-size:12px;
+        #label, #description, #description a, .detail{
+            font-size:14px;
+            line-height:1.2;
         }
-        #project #label{
-            font-size:15px;
-        }
-    }
+}
 @media (max-width: 850px) {
     .top{   
         grid-template-columns: 35vw 65vw;
@@ -332,15 +323,12 @@ input:focus::-webkit-slider-runnable-track {
             display:flex;
             flex-direction:column;
         }
-        #description, #description a{
+        #label, #description, #description a{
             font-size:20px;
         }
         .detail{
             font-size:13px;
             margin-bottom:20px;
-        }
-        #project #label{
-            font-size:22px;
         }
         #description{
             width:92vw;
@@ -354,17 +342,13 @@ input:focus::-webkit-slider-runnable-track {
         .modal-overlay img{
             max-width:96%;
         }
-    }
+}
     @media (max-width: 550px) {
 
-        #description, #description a{
+        #label, #description, #description a{
             font-size:16px;
         }
         .detail{
             font-size:12px;
-        }
-        #project #label{
-            font-size:18px;
-        }
     }
- }
+}
