@@ -3,12 +3,20 @@
   src:url('/fonts/NeueMontreal-Medium') format('otf');
 }
 @font-face{
+  font-family: "Neue Montreal";
+  src:url('/fonts/NeueMontreal-Regular') format('otf');
+}
+@font-face{
   font-family: "Saol Display";
   src:url('/fonts/SaolDisplay-LightItalic') format('otf');
 }
 @font-face{
   font-family: "Reconna";
   src:url('/fonts/ReconnaSerif') format('otf');
+}
+@font-face{
+  font-family: "Neue Machina";
+  src:url('/fonts/NeueMachina-Regular.woff') format('woff');
 }
 
 html{
