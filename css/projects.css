@@ -6,6 +6,10 @@
 .projectTitle:hover{
 cursor:default;
 }
+.index{
+    justify-self:flex-end; 
+   transform:rotateY(90deg);
+  }
 
 #project{
     position:relative;

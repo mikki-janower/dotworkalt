@@ -1,10 +1,14 @@
 @font-face{
   font-family: "Neue Montreal Medium";
-  src:url('fonts/NeueMontreal-Medium') format('otf');
+  src:url('/fonts/NeueMontreal-Medium') format('otf');
 }
 @font-face{
   font-family: "Saol Display";
-  src:url('fonts/SaolDisplay-LightItalic') format('otf');
+  src:url('/fonts/SaolDisplay-LightItalic') format('otf');
+}
+@font-face{
+  font-family: "Reconna";
+  src:url('/fonts/ReconnaSerif') format('otf');
 }
 
 html{
@@ -85,14 +89,20 @@ a{
   display:inline;
   transition:.2s;
 }
-.index{
-  justify-self:flex-end; 
-  transform:rotateY(90deg);
-}
 .flip{
   transition: .2s;
   text-align:left;
   justify-content:flex-start;
+}
+.flip:hover{
+  transform:rotateY(180deg);
+}
+.about{
+  justify-self:flex-start;
+}
+.index{
+  justify-self:flex-end; 
+ transform:rotateY(90deg);
 }
 
 /*-------------------------------------about----------------------------------------*/
@@ -172,6 +182,17 @@ font-family: 'Neue Montreal';
   transition: .2s;
   cursor:pointer;
 }
+/*------------make featured story one huge image rather than 2 thumbnails--------*/
+.firstfeature .extender img:nth-of-type(2){
+  display:none;
+}
+.firstfeature .extender img{
+  width:100%;
+}
+.firstfeature .extender{
+  padding-right:0;
+}
+/*----back 2 our regularly scheduled programming----*/
 .buttons{
   display:none;
 }
@@ -194,7 +215,7 @@ font-family: 'Neue Montreal';
   vertical-align:top;
 }
 .thumbnails img{
-  height:24px;
+  height:26px;
   padding-right:6px;
   display:inline-block;
   vertical-align:center;

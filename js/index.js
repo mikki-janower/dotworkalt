@@ -1,21 +1,26 @@
 $(document).ready(function(){
  $('#fullindex').fadeIn(200);
- $('.firstfeature').find(".extender").delay(350).slideToggle(250);
+ $('.firstfeature').find(".extender").delay(600).slideToggle(350);
  //$('.secondfeature').find(".extender").delay(700).slideToggle(250);
  /*$('.listing').each(function(){
     $('.extender').slideDown(350)
  });*/
  let index = true;
  let about = false;
+ let extended= false;
 
-/*$(".extender").each(function (i) {
-      // store the item around for use in the 'timeout' function
+/* $('.extender').each(function (i) {
+
+         // store the item around for use in the 'timeout' function
       var $item = $(this); 
       // execute this function sometime later:
       setTimeout(function() { 
-        $item.slideToggle(250)}, 250*i);
+        $item.slideToggle(300)}, 300*i);
+
+
+
       // each element should animate half a second after the last one.
-  });*/
+  }).delay(600); */
  
     
 //lozad is supposed to help with lazyloading, etc
@@ -26,26 +31,33 @@ const observer = lozad(); // lazy loads elements with default selector as '.loza
 observer.observe();
 
 //----------------------------make extender visible on click
-var listing = $('.listing');
+var minilisting = $('.mini');
+var fulllisting = $('.full');
 var extender = $('.extender');
+var listing = $('.listing')
 
-$(listing).click(function(){
+/*$(listing).click(function(){
     //label all extenders "other" except for the selected one
     $(extender).removeClass('thisextender').addClass('otherextender');
-    $(listing).removeClass('thislisting');
+    $(minilisting).removeClass('thislisting');
     $(this).find(extender).removeClass('otherextender').addClass('thisextender');
 
     //get rid of all "other" elements
   //  $('.otherextender').slideUp(250);
     //toggle selected element
     $('.thisextender').slideToggle(250);
+}); */
+
+$(listing).hover(function(){
+    $(this).find('.extender');
 });
 
 //if there's a full case study, to go it on click
-$(extender).click(function(){
-    let dataLink = $(this).data("link");
+$('.listing').click(function(){
+    let thisextender = $(this).find(extender);
+    let dataLink = $(thisextender).data("link");
     if (dataLink == "0"){
-    } else if ($(this).data("target") == "_blank") {
+    } else if ($(thisextender).data("target") == "_blank") {
         window.open(dataLink);
     } else {
         window.location.href = dataLink;
