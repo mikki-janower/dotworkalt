@@ -5,7 +5,7 @@ $(document).ready(function () {
         const w = window.innerWidth;
         if (w >= 1000) {
             $(".name").html(
-                "Mikki Janower<span class='dot'>&nbsp dot &nbsp</span>Work"
+                "Mikki Janower<span class='dot'> dot &nbsp</span>Work"
             );
         } else if (w >= 700) {
             $(".name").html(
@@ -47,7 +47,7 @@ $(listing).attr("data-aos", "fade-in"); */
 const bottomScrolled = function() {
 $(window).scroll(function () {
     let w = window.innerWidth;
-    if (w < 700) {
+    if (w < 900) {
         if ($(window).scrollTop() + $(window).height() >= $(document).height() - 160) {
             $(".bottom").fadeIn(200); 
         } else {
@@ -58,7 +58,7 @@ $(window).scroll(function () {
 };
 const bottomVisibility = function () {
  let w = window.innerWidth;
- if (w < 700){
+ if (w < 900){
   $(".bottom").css("display", "none");
     bottomScrolled();
  } else {

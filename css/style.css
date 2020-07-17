@@ -2,7 +2,10 @@
   font-family: "Neue Montreal Medium";
   src:url('fonts/NeueMontreal-Medium.otf');
 }
-
+@font-face{
+  font-family: "Saol Display Reg";
+  src:url('fonts/SaolDisplay-RegularItalic.otf');
+}
 @font-face{
   font-family: "Saol Display";
   src:url('fonts/SaolDisplay-LightItalic.otf');
@@ -30,8 +33,8 @@ html{
   background-color: yellow;
 }
 body {
-	font-family: 'Neue Montreal';
-	font-size: 17px;
+	font-family: 'Neue Montreal Medium';
+	font-size: 18px;
 	line-height: 1;
 	color: black;
   left:16px;
@@ -40,22 +43,22 @@ body {
 }
 .dot{
   font-size: 17px;
-  font-family: 'Saol Display';
+  font-family: 'Saol Display Reg';
   font-style:italic;
 }
 .top{
+  position:absolute;
   z-index:100;
-  position: fixed; 
   display:grid;
   width: 100%;
   grid-template-columns: 35fr 35fr 30fr 10px;
   flex-direction: row;
   padding-left:8px;
   padding-top:12px;
-  background-color:#f2f2f2;
+ /* background-color:#f2f2f2;
   -webkit-box-shadow: 0px -1px 10px 11px #f2f2f2;
  -moz-box-shadow: 0px -1px 10px 11px #f2f2f2;
- box-shadow: 0px -1px 10px 11px #f2f2f2;
+ box-shadow: 0px -1px 10px 11px #f2f2f2;*/
 
 transition-property: background-color, box-shadow;
 transition-duration: 0.5s, .5s;
@@ -63,6 +66,7 @@ transition-duration: 0.5s, .5s;
 -ms-transition: background-color 0.5s linear;
 transition: background-color 0.5s linear;
 }
+
 .top p, .top a, .bottom a, #projfooter, .mobilecontact{
   color: black;
   font-family: 'Neue Montreal Medium';
@@ -105,8 +109,8 @@ a{
 .about{
   justify-self:flex-start;
 }
-.index{
-  justify-self:flex-end; 
+.list{
+  justify-self:flex-start; 
   padding-left:8px;
 }
 
@@ -118,8 +122,6 @@ a{
   min-height:10px;
 }
 #about{
-font-family: 'Neue Montreal';
- line-height:1.3;
  max-width: 100%;
  display: grid;
  grid-template-columns: 35fr 35fr 30fr;
@@ -128,6 +130,7 @@ font-family: 'Neue Montreal';
 }
 
 #about p{
+  line-height:1.25;
   padding:0;
   padding-left:6px;
   margin:0;
@@ -153,10 +156,12 @@ font-family: 'Neue Montreal';
   padding-bottom:14px;
 }
 #about .contact{
+  line-height:1.175;
   display:inline-block;
   justify-content:flex-start;
   text-align:left;
-  padding-right:26px;
+  padding-right:20px;
+  padding-left:12px;
   grid-column:3;
   grid-row:1;
   padding-bottom:14px;
@@ -167,7 +172,7 @@ font-family: 'Neue Montreal';
   grid-row:3;
   grid-column:1;
   line-height:1;
-  flex-direction:column;
+  flex-direction:row;
   flex-wrap:wrap;
   padding-bottom:14px;
   transition:.2s; 
@@ -185,7 +190,7 @@ font-family: 'Neue Montreal';
   margin:0;
   padding:0;
   max-width:100%;
-  top:56px;
+  top:70px;
 }
 .listing{
   max-width: 100%;
@@ -199,13 +204,10 @@ font-family: 'Neue Montreal';
   cursor:pointer;
   transition: .3s;
 }
-/*.listing:not(.firstfeature):hover{
-  padding-bottom:18px;
- background-color:yellow;
-} */
+
 /*------------make featured story one huge image rather than 2 thumbnails--------*/
 
-.firstfeature .extender img:nth-of-type(2){
+/*.firstfeature .extender img:nth-of-type(2){
   display:none;
 }
 .firstfeature .extender img{
@@ -215,18 +217,17 @@ font-family: 'Neue Montreal';
 
 .firstfeature .images{
   padding-right:0px;
-}
+}*/
 /*----back 2 our regularly scheduled programming----*/
 .title, .description, .thumbnails{
   grid-row:1;
 }
 .title, .description{
   transition:.3s;
-  font-family: "Neue Machina";
   padding-right:20px;
   line-height:1.2;
   display:inline;
-  align-self:middle;
+  align-self:start;
 }
 .thumbnails{
   grid-column:3;
@@ -249,10 +250,7 @@ font-family: 'Neue Montreal';
   padding-right:10px;
   grid-row:2;
 }
-.listing:not(.firstfeature) .extender{
-  height:2px;
-  overflow-y:hidden;
-}
+
 .images img{
   width:50%;
   height:auto;
@@ -276,11 +274,13 @@ font-family: 'Neue Montreal';
   transition:.2s;
   padding-bottom:16px;
 }
+.listing:not(.firstfeature) .words{
+  display:none;
+}
 .details{
   display:inline-flex;
   position:relative;
   padding-right:14px;
-  font-family: "Neue Machina";
   grid-column:1;
   grid-row:3;
   vertical-align:bottom;
@@ -294,19 +294,22 @@ font-family: 'Neue Montreal';
   transition: background-color, box-shadow;
   transition-duration:.3s;
   border-radius:8px;
-  font-family: "Saol Display";
+  font-family: "Saol Display Reg";
   font-style:italic;
 }
 .words a, .words i{
-  font-family: "Saol Display";
+  font-family: "Saol Display Reg";
 }
 .more{
-  font-family: "Neue Machina";
-  margin-top:40px;
+  margin-top:20px;
   padding-left:10px;
+  padding-right:10px;
   line-height:1.2;
-  margin-bottom:20px;
+  margin-bottom:10px;
   background-color:#f2f2f2;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
 }
 /*---------------------------------meeeeeeeeeedia queeeeeeeeriiiiiiiiiiiiesssssss-----------*/
 
@@ -315,16 +318,16 @@ font-family: 'Neue Montreal';
       grid-template-columns: 35% 50% 15%;
   }
 }
-@media (max-width:1000px){
+/*@media (max-width:1000px){
   body{
       font-size:15px;
   }
   .title, .description, .details, .more{
     font-size: 17px;
   }
-}
+}*/
 @media (max-width: 900px){
-  .extender{
+  /*.extender{
     padding-top:8px;
     grid-row-gap:14px;
     grid-template-columns: 35% 35% 18% 12%;
@@ -345,25 +348,12 @@ font-family: 'Neue Montreal';
       padding-right:30px;
   }
 
-  .more{
-      margin-right:16px;
-      line-height:1.3;
-  }
   .words{
       grid-column:1/span 3;
       grid-row:2;
       padding-bottom:0px;
   }
-  #about .p{
-    padding-bottom:20px;
-  }
-  body{
-    font-size:17px;
-  }
-  #about img{
-    max-height:200px;
-  }
-  .details{
+    .details{
       grid-column:4;
       grid-row:2;
       justify-self:flex-end;
@@ -371,10 +361,17 @@ font-family: 'Neue Montreal';
   .details span{
       margin-right:0px;
   }
+  */
+  #about .p{
+    padding-bottom:20px;
+    padding-right:14px;
+  }
+  body{
+    font-size:17px;
+  }
 }
 
-
-@media(max-width: 850px){
+/*@media(max-width: 850px){
   #about{
     padding-top:40px;
   }
@@ -413,33 +410,32 @@ font-family: 'Neue Montreal';
     padding-bottom: 50px;
   }
 
-}
+}*/
 
 
-@media (max-width: 800px) { 
+/*@media (max-width: 850px) { 
   #about .p, #about .contact{
     grid-column:2/span 3;
     padding-right:30px;
 }
+#about .p{
+  padding-bottom:0px;
+}
 #about .contact{
+
     grid-row:2;
     padding-left:6px;
     padding-bottom:14px;
 }
-}
+}*/
 
 @media (max-width: 700px){
  .details{
     display:none;
   }
-  .words{
-    padding-top:6px;
-    grid-column:1/span 3; 
-    justify-content:stretch;
-  }
   #about{
-    padding-top:60px;
-    display:grid;
+    padding-top:0px;
+    display:none;
     grid-template-columns: 35fr 65fr;
     grid-column-gap:10px;
     grid-template-rows: auto auto;
@@ -448,7 +444,7 @@ font-family: 'Neue Montreal';
     border-bottom:none;
   }
   #about .p{
-    font-size:1.5rem;
+    font-size:22px;
     padding-right: 6px;
     padding-bottom:8px;
     letter-spacing:-.1px;
@@ -469,24 +465,72 @@ font-family: 'Neue Montreal';
     grid-column:1/span 2;
     padding-right:10px;
   }
-
   #about .contact{
     display:none;
   }
   #about .mobilecontact{
-    display:grid;
+    display:flex;
+    flex-direction:column;
+    grid-column:2;
+    font-size:22px;
   }
+  #about span{
+    font-size:22px;
+    grid-column:1;
+    padding-left:5px;
+  }
+  .list{
+    display:none;
+  }
+  .thumbnails img:nth-of-type(3){
+    display:none;
+  }
+
+.listing{
+  font-size:22px;
+}
+.description{
+  display:none;
+}
+.title{
+  align-self:end;
+  grid-column:1/span 4;
+}
+.firstfeature .title, .firstfeature .thumbnails{
+  grid-row:3;
+  padding-top: 14px;
+}
+.firstfeature .images img:nth-of-type(2){
+  display:none;
+}
+.firstfeature .images img:first-of-type{
+  width:100%;
+}
+.firstfeature .images{
+  grid-column:1/span 4;
+  padding-right:0px;
+}
+.listing:not(.firstfeature) .extender{
+  display:none;
+}
+
+
+.more span:nth-of-type(2){
+  display:none;
+}
+
+
   .flip:hover{
     transform:rotateY(0deg);
   }
-  .top p, .top a, .bottom a, #projfooter, .mobilecontact{
-    font-size: 1.5em;
+  .top p, .top a, .bottom a, #projfooter{
+    font-size: 24px;
   }
 }
 
   @media(max-width:500){
     .firstfeature .details, .firstfeature .description, .listing .title{
-      font-size:1.5em;
+      font-size:22px;
     }
 
 }

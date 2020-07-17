@@ -14,12 +14,50 @@
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 
+    <style>
+        #about .p, #about .contact{
+            font-size:18px;
+            font-family: 'Neue Montreal Medium';
+        }
+        #about .p{
+            padding-right:24px;
+        }
+        #about .contact{
+            padding-left:0;
+        }
+        #fullindex{
+            top:60px;
+            width:100%;
+            padding-left:8px;
+            padding-right:0px;
+        }
+        .title, .description, .details, .more{
+            font-family:'Neue Montreal Medium';
+            font-size:18px;
+        }
+        a{
+            font-family: 'Saol Display Reg';
+        }
+        .top{
+            grid-template-columns: 36% 33% 30%;
+            position:relative;
+        }
+        .about {
+            grid-column:2;
+        }
+        .name{
+            position:fixed;
+        }
+        .index{
+            justify-self:flex-start;
+        }
+    </style>
 </head>
 <body>
-    <section class="top">
+    <section class="top sticky">
     <a class="name">Mikki</a>
     <a class="flip about">About</a>
-    <a class="flip list">Index</a>
+    <a class="flip index">Index</a>
     </section>
 
 <!--<div class="querytown"></div>-->
@@ -29,11 +67,11 @@
     <div id="about" style="display:none;">
         <div class="p"><p>Mikki Janower is a designer and art director working across editorial layout, interaction design, branding, and typography. She is currently based in Brooklyn, where she maintains an active freelance practice and cultivates her small but growing library of magazines.<br><br>She recently recieved a BFA in Communication Design from Washington University in St. Louis and is on the lookout for postgraduate opportunities.</p></div>
         <div class="contact">She's open to new projects, collaborations, conversations, and friends! Track her down via <a style="white-space: nowrap;" href="mailto:mikki@janower.net" target="_blank">email,</a><a style="white-space: nowrap;" href="http://instagram.com/mikki.indd" target="_blank"> Instagram,</a> or <a style="white-space: nowrap;" href="https://www.are.na/mikki-janower" target="_blank">Are.na.</a> You can also download her <a style="white-space: nowrap;" href="https://mikkijanower.work/assets/Mikki_Janower_Resume.pdf" target="_blank">resume</a>, find her on <a style="white-space: nowrap;" href="http://linkedin.com/in/mtjanower" target="_blank">LinkedIn,</a> or <a style="white-space: nowrap;" href="mailto:cindy@janower.net?subject=Your daughter is so talented!" target="_blank">send a nice note</a> to her mother.</div>
-        <span style="display:none;">Contact via</span><div class="mobilecontact"><a class="flip" style="white-space: nowrap;" href="http://instagram.com/mikki.indd" target="_blank"> Instagram</a><a class="flip" style="white-space: nowrap;" href="https://www.are.na/mikki-janower" target="_blank">Are.na</a><a class="flip" style="white-space: nowrap;" href="https://mikkijanower.work/assets/Mikki_Janower_Resume.pdf" target="_blank">Resume</a><a class="flip" style="white-space: nowrap;" href="mailto:mikki@janower.net" target="_blank">Email</a></div>
+        <div class="mobilecontact"><a class="flip" style="white-space: nowrap;" href="http://instagram.com/mikki.indd" target="_blank"> Instagram</a><a class="flip" style="white-space: nowrap;" href="https://www.are.na/mikki-janower" target="_blank">Are.na</a><a class="flip" style="white-space: nowrap;" href="https://mikkijanower.work/assets/Mikki_Janower_Resume.pdf" target="_blank">Resume</a><a class="flip" style="white-space: nowrap;" href="mailto:mikki@janower.net" target="_blank">Email</a></div>
         <img src="assets/headshot.jpg"> 
     </div>
 </div>
-<div class="listing firstfeature">
+<div class="listing">
         <div class="title" data-title="Cyberotica" data-link="cyberotica.html">Cyberotica</div>
         <div class="description">On art, sex, & robots</div>
         <div class="thumbnails"><img src="thumbnails/factoryofthesun2.jpg"><img src="thumbnails/factoryofthesun.jpg"><img src="thumbnails/contents2.jpg"></div>
@@ -46,7 +84,7 @@
 </div>
 <div class="listing full" data-title="Postcursor / Starrynite" data-link="postcursor.html">
     <div class="title">Postcursor / Starrynite</div>
-    <div class="description">Machine learning as relational design</div>
+    <div class="description">Machine learning as conditional design</div>
     <div class="thumbnails"><img src="thumbnails/postcursor-02.png"><img src="thumbnails/postcursor-04.png"></div>
     <div class="extender" data-link="postcursor.html" data-target="" style="display:none;"> <div class="words" style="display:none;"><i>Postcursor</i> and <i>Starrynite</i> are microsites trained to generate graphics according to users’ hand movements, exploring the notion of process-as-product.
         <br><br>Each site uses the same machine learning model to its own end. Postcursor lets users draw cursors across the screen, while Starrynite leaves a trail of stars across the user's backdrop.</div>
@@ -233,7 +271,7 @@
 </div>-->
 
 <div class="more">
-  <span>Looking for something? More available upon request — <a href = "mailto:mikki@janower.net">ask away :)</a> </span> <span>Janower 2020</span>
+   Looking for something? More available upon request — <a href = "mailto:mikki@janower.net">ask away :) </a> 
 </div>
 
 </section>  
@@ -243,7 +281,33 @@
     <script src="js/index.js"></script>
     <script src="js/universal.js"></script>
 
+    <script>
+        $(document).ready(function(){
+        $('#about').delay(400).slideDown(250);
+        $('.extender').each(function (i) {
+         // store the item around for use in the 'timeout' function
+        var $item = $(this); 
+        // execute this function sometime later:
+        setTimeout(function() { 
+        $item.delay(700).slideToggle(250)}, 300*i);
+        // each element should animate half a second after the last one.
+        });
+        
+        $('.index').click(function(){
+            $('.extender').each(function (i) {
+         // store the item around for use in the 'timeout' function
+        var $item = $(this); 
+        // execute this function sometime later:
+        setTimeout(function() { 
+        $item.slideToggle(250)}, 150*i);
+        });
+        });
+        });
+
+    </script>
+
 
 </body>
 
 </html>
+

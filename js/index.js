@@ -5,21 +5,32 @@ let extender= $('.extender');
 
  $('#fullindex').fadeIn(200);
 
- $('.firstfeature').find(extender).delay(400).slideToggle(350);
+ //$('.firstfeature').find(extender).delay(400).slideToggle(350);
 
  let index = true;
- let about = false;
 
 
  //function to get every listing to open up sequentially, .3s apart
-/* $('.extender').each(function (i) {
-         // store the item around for use in the 'timeout' function
-      var $item = $(this); 
-      // execute this function sometime later:
-      setTimeout(function() { 
-        $item.slideToggle(300)}, 300*i);
-      // each element should animate half a second after the last one.
-  }).delay(600); */
+    $('#about').delay(400).slideToggle(250);
+    $('.extender').each(function (i) {
+     // store the item around for use in the 'timeout' function
+    var $item = $(this); 
+    // execute this function sometime later:
+    setTimeout(function() { 
+    $item.delay(700).slideToggle(250)}, 300*i);
+    // each element should animate half a second after the last one.
+    });
+
+//clicking the index button makes the index into a list
+$('.list').click(function(){
+    $('.extender').each(function (i) {
+ // store the item around for use in the 'timeout' function
+var $item = $(this); 
+// execute this function sometime later:
+setTimeout(function() { 
+$item.slideToggle(250)}, 150*i);
+});
+});
     
 //----------------lozad is supposed to help with lazyloading, etc
 var image = $('img');
@@ -68,17 +79,10 @@ $('.listing').click(function(){
 //----------------------------------------about
 
 $(".about").click(function () {
-
-    if (about == false) {
         //---------------show about
         $("#about").slideToggle(250);
-        $("#about img").css("display", "block");
-        about = true;
 
-    } else {
-        $("#about").slideUp(250);
-        about = false;
-    }
+
 
     $('html,body').animate({
         scrollTop: $("#about").offset().top - 80

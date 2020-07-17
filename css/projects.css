@@ -239,9 +239,12 @@ textarea:hover{
     font-size:14px;
     margin-bottom:20px;
 }
+.sliderlabel span{
+    font-family:"Montreal Neue";
+}
 /*-------style slider*/
 .reconnapage input{
-    margin-top:40px;
+    margin-top:10px;
     cursor:pointer;
     margin-bottom:6px;
     background-color:transparent;
@@ -296,7 +299,7 @@ input:focus::-webkit-slider-runnable-track {
 /*-----------------------medddddddia queriesssssss------------------------------------*/
 
 @media (max-width: 1000px) {
-        #label, .detail{
+        #label, #label a, .detail{
             font-size:14px;
         }
         #projfooter{
@@ -340,14 +343,17 @@ input:focus::-webkit-slider-runnable-track {
         }
         #projfooter{
             margin-top:80px;
-            margin-bottom:4px;
+            margin-bottom:24px;
             align-self:flex-end;
             width:65%;
+        }
+        .bottom{
+            margin-bottom:32px;
         }
         .modal-overlay img{
             max-width:96%;
         }
-        #project #label{
+        #project #label, #label a{
             display:none;
         }
 }
