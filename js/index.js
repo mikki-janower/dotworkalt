@@ -55,7 +55,13 @@ $('.listing').click(function(){
 }); 
 
 
-
+/*$('.listing:not(.firstfeature)').mouseenter(function(){
+   if ($('.listing:not(.firstfeature):hover').length > .5){
+        $(this).find(extender).slideDown(150);
+    }
+}).mouseleave(function(){
+    $(this).find(extender).slideUp(150);
+});*/
 
 
 //--------------------------------------------------------------------------------index page turns
