@@ -430,7 +430,7 @@ font-family: 'Neue Montreal';
 
 @media (max-width: 700px){
   #about{
-    padding-top:80px;
+    padding-top:60px;
     display:grid;
     grid-template-columns: 35fr 65fr;
     grid-column-gap:10px;
@@ -478,6 +478,9 @@ font-family: 'Neue Montreal';
   }
   .flip:hover{
     transform:rotateY(0deg);
+  }
+  .top p, .top a, .bottom a, #projfooter, .mobilecontact{
+    font-size: 1.5rem;
   }
 }
 
