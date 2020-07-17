@@ -429,6 +429,14 @@ font-family: 'Neue Montreal';
 }
 
 @media (max-width: 700px){
+ .details{
+    display:none;
+  }
+  .words{
+    padding-top:6px;
+    grid-column:1/span 3; 
+    justify-content:stretch;
+  }
   #about{
     padding-top:60px;
     display:grid;
@@ -449,14 +457,6 @@ font-family: 'Neue Montreal';
     padding-right:6px;
     grid-row:1;
     padding-right:20px;
-  }
- .details{
-    display:none;
-  }
-  .words{
-    padding-top:6px;
-    grid-column:1/span 3; 
-    justify-content:stretch;
   }
   #about img{
     display:block;
@@ -480,13 +480,13 @@ font-family: 'Neue Montreal';
     transform:rotateY(0deg);
   }
   .top p, .top a, .bottom a, #projfooter, .mobilecontact{
-    font-size: 1.5rem;
+    font-size: 1.5em;
   }
 }
 
   @media(max-width:500){
     .firstfeature .details, .firstfeature .description, .listing .title{
-      font-size:1.3rem;
+      font-size:1.5em;
     }
 
 }
