@@ -196,6 +196,9 @@ font-family: 'Neue Montreal';
   cursor:pointer;
   transition: .2s;
 }
+.listing:not(.firstfeature):hover{
+  padding-bottom:18px;
+}
 /*------------make featured story one huge image rather than 2 thumbnails--------*/
 
 .firstfeature .extender img:nth-of-type(2){
@@ -243,7 +246,6 @@ font-family: 'Neue Montreal';
   padding-top:10px;
   padding-right:10px;
   grid-row:2;
-  transition:.2s;
 }
 .images img{
   width:50%;

@@ -30,7 +30,7 @@ observer.observe();
 //----------------------------make extender visible on click
 
 
-$(listing).click(function(){
+/* $(listing).click(function(){
     //label all extenders "other" except for the selected one
     $(extender).removeClass('thisextender').addClass('otherextender');
     $(listing).removeClass('thislisting');
@@ -40,10 +40,9 @@ $(listing).click(function(){
   //  $('.otherextender').slideUp(250);
     //toggle selected element
     $('.thisextender').slideToggle(250);
-}); 
+}); */
 
 //go to case study / link when you click a listing on the index
-/*var extender = $('.extender');
 $('.listing').click(function(){
     let thisextender = $(this).find(extender);
     let dataLink = $(thisextender).data("link");
@@ -53,7 +52,11 @@ $('.listing').click(function(){
     } else {
         window.location.href = dataLink;
     }
-}); */
+}); 
+
+
+
+
 
 //--------------------------------------------------------------------------------index page turns
 //----------------------------------------about
