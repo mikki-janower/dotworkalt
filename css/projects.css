@@ -23,10 +23,10 @@ cursor:default;
     align-items:start;
 }
 .labelita{
-    font-family: 'Neue Machina';
+    font-family: 'Neue Montreal Medium';
 }
 .labelreg{
-    font-family: 'Saol Display';
+    font-family: 'Neue Montreal Medium';
 }
 #project #label{
     font-size:17px;
@@ -39,7 +39,7 @@ cursor:default;
     position:relative;
 }
 i, #description a{
-    font-family:"Saol Display";
+    font-family:"Saol Display Reg";
     font-style:italic;
 }
 #project img{
@@ -194,12 +194,12 @@ grid-row:3;
     max-width:50%;
     font-size:16px;
     padding-right: 30px;
-    font-family: 'Neue Machina';
+    font-family: 'Neue Montreal';
 }
 .citation{
     max-width:50%;
     font-size:13px;
-    font-family: 'Neue Machina';
+    font-family: 'Neue Montreal';
 }
 /*-----------------------non-universal changes for specific projects----------------*/
 
