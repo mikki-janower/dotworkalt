@@ -2,6 +2,7 @@
   font-family: "Neue Montreal Medium";
   src:url('fonts/NeueMontreal-Medium.otf');
 }
+
 @font-face{
   font-family: "Saol Display";
   src:url('fonts/SaolDisplay-LightItalic.otf');
@@ -12,12 +13,13 @@
 }
 @font-face{
   font-family: "Neue Machina";
-  src:url('fonts/NeueMachina-Regular.woff');
+  src:url('fonts/NeueMachina.otf');
 }
 @font-face{
   font-family: "Neue Montreal";
   src:url('fonts/NeueMontreal-Regular.otf');
 }
+
 
 
 html{
@@ -183,7 +185,7 @@ font-family: 'Neue Montreal';
   margin:0;
   padding:0;
   max-width:100%;
-  top:80px;
+  top:60px;
 }
 .listing{
   max-width: 100%;
@@ -214,7 +216,6 @@ font-family: 'Neue Montreal';
 .firstfeature .images{
   padding-right:0px;
 }
-
 /*----back 2 our regularly scheduled programming----*/
 .title, .description, .thumbnails{
   grid-row:1;
@@ -321,13 +322,6 @@ font-family: 'Neue Montreal';
   .title, .description, .details, .more{
     font-size: 17px;
   }
-  /*.thumbnails img{
-    display:none;
-}
-.thumbnails img:first-of-type{
-    display:inline-block;
-    padding-right:6px;
-}*/
 }
 @media (max-width: 900px){
   .extender{
@@ -383,43 +377,34 @@ font-family: 'Neue Montreal';
 @media(max-width: 850px){
   #about{
     padding-top:40px;
-    border-bottom:none;
   }
   #fullindex{
-    top:20px;
+    top:30px;
   }
   .listing{
     grid-template-columns:35% 50% 15%;
   }
-  .listing:not(.firstfeature) .description{
+  .listing .description{
    display:none;
   }
   .listing .title{
-    grid-column:1/span 3;
+    grid-column:1/span 2;
     font-family: 'Neue Montreal Medium';
-    font-size:1.8rem;
+    font-size:1.5rem;
   }
   .listing .thumbnails{
     grid-column:3;
     grid-row:1;
     align-self:end;
   }
+  .thumbnails img:nth-of-type(3){
+    display:none;
+  }
   .firstfeature .words{
     display:none;
   }
-  .firstfeature .details, .firstfeature .description{
-    font-family: 'Neue Montreal Medium';
-    font-size:1.8rem;
-  }
-  .firstfeature .title{
+  .firstfeature .thumbnails, .firstfeature .title{
     grid-row:3;
-  }
-  .firstfeature .thumbnails{
-    grid-row:4;
-  }
-  .firstfeature .description{
-    grid-row:4;
-    grid-column: 1/span 3;
   }
   .firstfeature .details{
     display:none;
@@ -427,6 +412,7 @@ font-family: 'Neue Montreal';
   .more{
     padding-bottom: 60px;
   }
+
 }
 
 
@@ -443,6 +429,27 @@ font-family: 'Neue Montreal';
 }
 
 @media (max-width: 700px){
+  #about{
+    padding-top:80px;
+    display:grid;
+    grid-template-columns: 35fr 65fr;
+    grid-column-gap:10px;
+    grid-template-rows: auto auto;
+    padding-left:5px;
+    padding-right:15px;
+    border-bottom:none;
+  }
+  #about .p{
+    font-size:1.5rem;
+    padding-right: 6px;
+    padding-bottom:8px;
+    letter-spacing:-.1px;
+    font-family: 'Neue Montreal Medium';
+    grid-column:1/span 2;
+    padding-right:6px;
+    grid-row:1;
+    padding-right:20px;
+  }
  .details{
     display:none;
   }
@@ -450,14 +457,6 @@ font-family: 'Neue Montreal';
     padding-top:6px;
     grid-column:1/span 3; 
     justify-content:stretch;
-  }
-  #about{
-   display:grid;
-   grid-template-columns: 35fr 65fr;
-   grid-column-gap:10px;
-   grid-template-rows: auto auto;
-   padding-left:5px;
-   padding-right:15px;
   }
   #about img{
     display:block;
@@ -470,12 +469,7 @@ font-family: 'Neue Montreal';
     grid-column:1/span 2;
     padding-right:10px;
   }
-  #about .p{
-    grid-column:1/span 2;
-    padding-right:6px;
-    grid-row:1;
-    padding-right:20px;
-  }
+
   #about .contact{
     display:none;
   }
@@ -485,9 +479,12 @@ font-family: 'Neue Montreal';
   .flip:hover{
     transform:rotateY(0deg);
   }
+}
 
   @media(max-width:500){
-
+    .firstfeature .details, .firstfeature .description, .listing .title{
+      font-size:1.3rem;
+    }
 
 }
 

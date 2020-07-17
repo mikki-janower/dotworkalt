@@ -64,12 +64,13 @@ i, #description a{
     display:flex;
     flex-direction:row;
     justify-content:space-between;
-    border-top:1.3px black solid;
+    border-top:1px black solid;
     padding-top:0px;
     padding-bottom:0px;
 }
 .detail p{
     width:48%;
+    margin-top:10px;
 }
 .detail a{
     font-size:14px; 
