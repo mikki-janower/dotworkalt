@@ -185,7 +185,7 @@ font-family: 'Neue Montreal';
   margin:0;
   padding:0;
   max-width:100%;
-  top:60px;
+  top:56px;
 }
 .listing{
   max-width: 100%;
@@ -410,7 +410,7 @@ font-family: 'Neue Montreal';
     display:none;
   }
   .more{
-    padding-bottom: 60px;
+    padding-bottom: 50px;
   }
 
 }
