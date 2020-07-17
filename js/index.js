@@ -5,22 +5,26 @@ let extender= $('.extender');
 
  $('#fullindex').fadeIn(200);
 
- //$('.firstfeature').find(extender).delay(400).slideToggle(350);
+
 
  let index = true;
 
+if (window.innerWidth > 800) {
+//function to get every listing to open up sequentially, .3s apart
+$('#about').delay(400).slideToggle(250);
+$('.extender').each(function (i) {
+ // store the item around for use in the 'timeout' function
+var $item = $(this); 
+// execute this function sometime later:
+setTimeout(function() { 
+$item.delay(700).slideToggle(250)}, 300*i);
+// each element should animate half a second after the last one.
+});
 
- //function to get every listing to open up sequentially, .3s apart
-    $('#about').delay(400).slideToggle(250);
-    $('.extender').each(function (i) {
-     // store the item around for use in the 'timeout' function
-    var $item = $(this); 
-    // execute this function sometime later:
-    setTimeout(function() { 
-    $item.delay(700).slideToggle(250)}, 300*i);
-    // each element should animate half a second after the last one.
-    });
-
+} else {
+    $('.firstfeature').find(extender).delay(400).slideToggle(350);
+}
+ 
 //clicking the index button makes the index into a list
 $('.list').click(function(){
     $('.extender').each(function (i) {

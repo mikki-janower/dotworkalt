@@ -485,7 +485,9 @@ a{
   .thumbnails img:nth-of-type(3){
     display:none;
   }
-
+#fullindex{
+  top:30px;
+}
 .listing{
   font-size:22px;
 }
